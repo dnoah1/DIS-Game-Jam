@@ -12,6 +12,9 @@ public class StringControllerTwo : MonoBehaviour
     private int stringLength = 0;
     private System.Random rand = new System.Random();
     public PlayerTwo playerTwo;
+    public GameObject[] spriteArray;
+
+    public Sprite[] letterArray;
 
     // Start is called before the first frame update
     void Start()

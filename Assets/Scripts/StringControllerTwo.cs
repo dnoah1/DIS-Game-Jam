@@ -50,16 +50,16 @@ public class StringControllerTwo : MonoBehaviour
     	int correctInput = -1;
 
     	//WASD set correct input
-    	if(Input.GetKeyDown(KeyCode.UpArrow)){
+    	if(Input.GetKeyDown(KeyCode.I)){
     		correctInput = 0;
     	}
-    	else if(Input.GetKeyDown(KeyCode.LeftArrow)){
+    	else if(Input.GetKeyDown(KeyCode.J)){
     		correctInput = 1;
     	}
-    	else if(Input.GetKeyDown(KeyCode.DownArrow)){
+    	else if(Input.GetKeyDown(KeyCode.K)){
     		correctInput = 2;
     	}
-    	else if(Input.GetKeyDown(KeyCode.RightArrow)){
+    	else if(Input.GetKeyDown(KeyCode.L)){
     		correctInput = 3;
     	}
     	else if(Input.GetKeyDown(KeyCode.RightShift)){

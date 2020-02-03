@@ -9,12 +9,11 @@ public class StringControllerTwo : MonoBehaviour
 
 	private bool readyToShoot = false;
 	private Stack playerString = new Stack();
-    private int stringLength = 0;
+    private int stringLength = 10;
     private System.Random rand = new System.Random();
     public PlayerTwo playerTwo;
-    public GameObject[] spriteArray;
-
-    public Sprite[] letterArray;
+    public GameObject[] objectArray;
+    public Sprite[] spriteArray;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +25,13 @@ public class StringControllerTwo : MonoBehaviour
         readyToShoot = false;
         playerString = createRandomString();
         stringLength = sl;
+        displayString(playerString);
     }
 
     // Update is called once per frame
     void Update()
     {
-    	if(Input.anyKey){
+    	if (Input.anyKeyDown){
     		checkInput();   
     	}
     }
@@ -46,6 +46,16 @@ public class StringControllerTwo : MonoBehaviour
         }
 
         return playerString;
+    }
+
+    private void displayString(Stack playerString)
+    {
+        string[] letters = (string[])playerString.ToArray();
+
+        for (var i = 0; i < stringLength; i++)
+        {
+            objectArray[i].GetComponent<SpriteRenderer>().sprite = spriteArray[int.Parse(letters[i])];
+        }
     }
 
 

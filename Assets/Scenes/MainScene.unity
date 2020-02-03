@@ -292,6 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189834160}
   - component: {fileID: 189834159}
+  - component: {fileID: 189834161}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -356,12 +357,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189834158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.08, y: 1.75, z: 0}
+  m_LocalPosition: {x: -3.08, y: 1.75, z: 10}
   m_LocalScale: {x: 1.4603148, y: 1.2964709, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &189834161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189834158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2bb46ff47944d67afde1688ef04e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject1: {fileID: 614924747}
+  gameObject2: {fileID: 520147067}
 --- !u!1 &201684365
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTwo: {fileID: 1628873565}
-  spriteArray:
+  objectArray:
   - {fileID: 1795246651}
   - {fileID: 960075402}
   - {fileID: 1728850876}
@@ -751,7 +766,7 @@ MonoBehaviour:
   - {fileID: 1793427980}
   - {fileID: 483198552}
   - {fileID: 158239643}
-  letterArray:
+  spriteArray:
   - {fileID: -8351653824785249472, guid: 47566ed6d9c544189a1c3f4772aad736, type: 3}
   - {fileID: -3454765514018633931, guid: 47566ed6d9c544189a1c3f4772aad736, type: 3}
   - {fileID: -4924325686114331475, guid: 47566ed6d9c544189a1c3f4772aad736, type: 3}
@@ -891,7 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerOne: {fileID: 1495603227}
-  spriteArray:
+  objectArray:
   - {fileID: 1547701752}
   - {fileID: 1631483872}
   - {fileID: 891910035}
@@ -902,7 +917,7 @@ MonoBehaviour:
   - {fileID: 1183057746}
   - {fileID: 699405157}
   - {fileID: 510921749}
-  letterArray:
+  spriteArray:
   - {fileID: -269629282940853735, guid: 47566ed6d9c544189a1c3f4772aad736, type: 3}
   - {fileID: -6995052513335955845, guid: 47566ed6d9c544189a1c3f4772aad736, type: 3}
   - {fileID: -2402439431137067763, guid: 47566ed6d9c544189a1c3f4772aad736, type: 3}
@@ -1553,8 +1568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae4addc6fb3d4640b22b60f6127ccd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingSprite: {fileID: 0}
-  standingSprite: {fileID: 0}
+  shootingSprite: {fileID: 21300000, guid: 3b43c9f0a91b5492b883e61a47b0e776, type: 3}
+  standingSprite: {fileID: 21300000, guid: 51ed87e65c47f4123a0932acf3ea89f3, type: 3}
   gameScript: {fileID: 0}
   shootingDelay: 0
 --- !u!4 &1495603228
@@ -1731,8 +1746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6302f1c6b97d4cf08c4b3eb5e4ec9a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingSprite: {fileID: 0}
-  standingSprite: {fileID: 0}
+  shootingSprite: {fileID: 21300000, guid: 3b43c9f0a91b5492b883e61a47b0e776, type: 3}
+  standingSprite: {fileID: 21300000, guid: 51ed87e65c47f4123a0932acf3ea89f3, type: 3}
   gameScript: {fileID: 0}
   shootingDelay: 0
 --- !u!4 &1628873566

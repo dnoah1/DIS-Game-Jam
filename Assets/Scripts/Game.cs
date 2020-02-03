@@ -7,15 +7,19 @@ public class Game : MonoBehaviour
 
 	private int roundNumber = 1;
 
-	public StringControllerOne stringControllerOne;
-	public StringControllerTwo stringControllerTwo;
+	public GameObject gameObject1;
+	public GameObject gameObject2;
+    private StringControllerOne stringControllerOne;
+    private StringControllerTwo stringControllerTwo;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-    	resetGame();
+        stringControllerOne = gameObject1.GetComponent<StringControllerOne>();
+        stringControllerTwo = gameObject2.GetComponent<StringControllerTwo>();
+        resetGame();
 
    	}
 

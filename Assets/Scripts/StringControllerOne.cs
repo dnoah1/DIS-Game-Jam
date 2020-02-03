@@ -8,7 +8,7 @@ public class StringControllerOne : MonoBehaviour
 
 	private bool readyToShoot = false;
 	private Stack playerString = new Stack();
-
+    private int stringLength = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -16,9 +16,10 @@ public class StringControllerOne : MonoBehaviour
     	
     }
 
-    void initialize(stringLength){
+    void initialize(int sl){
         readyToShoot = false;
         playerString = createRandomString();
+        stringLength = sl;
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class StringControllerOne : MonoBehaviour
     private String createRandomString(){
     	playerString = new Stack();
 
-    	foreach(var i in stringLength){
+    	for(var i = 0; i < stringLength; i++){
     		playerString.Push(Random.Next(4));
     	}
     }

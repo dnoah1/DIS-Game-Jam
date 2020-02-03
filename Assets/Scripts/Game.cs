@@ -40,4 +40,11 @@ public class Game : MonoBehaviour
     	resetGame();
     }
 
+    public void resetRound(){
+        resetGame();
+    }
+
+    private void endGame(){
+        //exit
+    }
 }

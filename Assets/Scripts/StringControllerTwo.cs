@@ -9,17 +9,18 @@ public class StringControllerTwo : MonoBehaviour
 
 	private bool readyToShoot = false;
 	private Stack playerString = new Stack();
-
+    private int stringLength = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    void initialize(stringLength){
+    void initialize(int sl){
         readyToShoot = false;
         playerString = createRandomString();
+        stringLength = sl;
     }
 
     // Update is called once per frame
@@ -34,9 +35,9 @@ public class StringControllerTwo : MonoBehaviour
     private String createRandomString(){
     	playerString = new Stack();
 
-    	foreach(var i in stringLength){
-    		playerString.Push(Random.Next(4));
-    	}
+    	for(var i = 0; i < stringLength; i++){
+            playerString.Push(Random.Next(4));
+        }
     }
 
     private void checkInput(){
@@ -78,7 +79,6 @@ public class StringControllerTwo : MonoBehaviour
     	else{ //wrong input
     		reset();
     	}
-
     }
 
 

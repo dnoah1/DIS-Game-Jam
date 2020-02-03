@@ -9,6 +9,8 @@ public class StringControllerOne : MonoBehaviour
 	private bool readyToShoot = false;
 	private Stack playerString = new Stack();
     private int stringLength = 0;
+    private System.Random rand = new System.Random();
+    public PlayerOne playerOne;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,7 @@ public class StringControllerOne : MonoBehaviour
     	
     }
 
-    void initialize(int sl){
+    public void initialize(int sl){
         readyToShoot = false;
         playerString = createRandomString();
         stringLength = sl;
@@ -31,16 +33,20 @@ public class StringControllerOne : MonoBehaviour
     }
 
     //Creates a random string
-    private String createRandomString(){
+    private Stack createRandomString(){
     	playerString = new Stack();
-
+        
     	for(var i = 0; i < stringLength; i++){
-    		playerString.Push(Random.Next(4));
+            playerString.Push(rand.Next(4));
     	}
+
+        return playerString;
     }
 
-    private void checkInput(){
-    	private int correctInput;
+    private void checkInput()
+    {
+
+        int correctInput = -1;
 
     	//WASD set correct input
     	if(Input.GetKeyDown(KeyCode.W)){
@@ -52,23 +58,21 @@ public class StringControllerOne : MonoBehaviour
     	else if(Input.GetKeyDown(KeyCode.S)){
     		correctInput = 2;
     	}
-    	else if(Input.GetKeyDown(KeyCode.D){
+    	else if(Input.GetKeyDown(KeyCode.D)){
     		correctInput = 3;
     	}
     	else if(Input.GetKeyDown(KeyCode.LeftShift)){
     		if(readyToShoot){
-    			//Player.shoot
+                playerOne.shoot();
     		}
     		else{
     			reset();
     		}
     	}
-    	else{
-    		correctInput = -1;
-    	}
+    	
 
     	//Check if the input is correct
-    	if(playerString.Pop() == correctInput){
+    	if(playerString.Pop().Equals(correctInput)){
     		if(playerString.Count == 0){ //no more characters
     			readyToShoot = true;
     		}

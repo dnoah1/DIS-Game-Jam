@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 47566ed6d9c544189a1c3f4772aad736
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6995052513335955845
+    second: SeekPng.com_alphabet-png_1504932_0
+  - first:
+      213: -2402439431137067763
+    second: SeekPng.com_alphabet-png_1504932_1
+  - first:
+      213: 8782777187686920447
+    second: SeekPng.com_alphabet-png_1504932_2
+  - first:
+      213: -269629282940853735
+    second: SeekPng.com_alphabet-png_1504932_3
+  - first:
+      213: -3454765514018633931
+    second: SeekPng.com_alphabet-png_1504932_4
+  - first:
+      213: -3133864583493094725
+    second: SeekPng.com_alphabet-png_1504932_5
+  - first:
+      213: -8351653824785249472
+    second: SeekPng.com_alphabet-png_1504932_6
+  - first:
+      213: -4924325686114331475
+    second: SeekPng.com_alphabet-png_1504932_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +94,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SeekPng.com_alphabet-png_1504932_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175
+        width: 49
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94b17ce40dfc4a1598b61b8e9775f2f
+      internalID: -6995052513335955845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_alphabet-png_1504932_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 51
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587d09506c4b6470ea0db0465898df93
+      internalID: -2402439431137067763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_alphabet-png_1504932_2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 174
+        width: 47
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2043aa8e020a64124a2be6b44e5426ad
+      internalID: 8782777187686920447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_alphabet-png_1504932_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 0
+        width: 48
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72888f2daa2f74e048cea148c6841133
+      internalID: -269629282940853735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_alphabet-png_1504932_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 49
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea8ba7f1e48547e7ba1b8afc3202a76
+      internalID: -3454765514018633931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_alphabet-png_1504932_5
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 88
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074c82cd1003247c0861d2fd7f59c716
+      internalID: -3133864583493094725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_alphabet-png_1504932_6
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 174
+        width: 48
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f46db12d60d471087ba0d8bccff79a
+      internalID: -8351653824785249472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_alphabet-png_1504932_7
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 87
+        width: 49
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4b962f810b94720ab6702a4dc2a776
+      internalID: -4924325686114331475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

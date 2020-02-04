@@ -7,12 +7,15 @@ public class StringControllerOne : MonoBehaviour
 
 
 	private bool readyToShoot = false;
-	private Stack playerString = new Stack();
-    private int stringLength = 10;
+	private Queue playerString = new Queue();
+    private int stringLength;
+
     private System.Random rand = new System.Random();
     public PlayerOne playerOne;
     public GameObject[] objectArray;
     public Sprite[] spriteArray;
+
+    private int currentLetter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -21,39 +24,65 @@ public class StringControllerOne : MonoBehaviour
     }
 
     public void initialize(int sl){
+        currentLetter = 0;
+        stringLength = sl;
         readyToShoot = false;
         playerString = createRandomString();
-        stringLength = sl;
+        resetAlpha();
         displayString(playerString);
     }
 
     // Update is called once per frame
     void Update()
     {
-    	if (Input.anyKeyDown){
-    		checkInput();   
-    	}
+
+    	//WASD set correct input
+        if(Input.GetKeyDown(KeyCode.W)){
+            checkInput(0);
+        }
+        else if(Input.GetKeyDown(KeyCode.A)){
+            checkInput(1);
+        }
+        else if(Input.GetKeyDown(KeyCode.S)){
+            checkInput(2);
+        }
+        else if(Input.GetKeyDown(KeyCode.D)){
+            checkInput(3);
+        }
+        else if(Input.GetKeyDown(KeyCode.LeftShift)){
+            if(readyToShoot){
+                playerOne.shoot();
+            }
+            else{
+                this.reset();
+            }
+        }
+   
+
     }
 
     //Creates a random string
-    private Stack createRandomString(){
-    	playerString = new Stack();
+    private Queue createRandomString(){
+    	playerString = new Queue();
         
     	for(var i = 0; i < stringLength; i++){
-            playerString.Push(rand.Next(4));
+            int n = rand.Next(4);
+            playerString.Enqueue(n);
     	}
 
         return playerString;
     }
 
-    private void displayString(Stack playerString)
+    private void displayString(Queue playerString)
     {
 
-        Stack tmp = new Stack(playerString);
+        Queue tmp = new Queue(playerString);
 
         for (var i = 0; i < stringLength; i++)
         {
-            objectArray[i].GetComponent<SpriteRenderer>().sprite = spriteArray[(int)tmp.Pop()];
+            int number = (int)tmp.Dequeue();
+
+            objectArray[i].GetComponent<SpriteRenderer>().sprite = spriteArray[number];
         }
         for(var i = stringLength; i < 10; i++){
             objectArray[i].GetComponent<SpriteRenderer>().sprite = null;
@@ -61,51 +90,45 @@ public class StringControllerOne : MonoBehaviour
     }
 
 
-    private void checkInput()
+    private void checkInput(int correctInput)
     {
 
-        int correctInput = -1;
-
-    	//WASD set correct input
-    	if(Input.GetKeyDown(KeyCode.W)){
-    		correctInput = 0;
-    	}
-    	else if(Input.GetKeyDown(KeyCode.A)){
-    		correctInput = 1;
-    	}
-    	else if(Input.GetKeyDown(KeyCode.S)){
-    		correctInput = 2;
-    	}
-    	else if(Input.GetKeyDown(KeyCode.D)){
-    		correctInput = 3;
-    	}
-    	else if(Input.GetKeyDown(KeyCode.LeftShift)){
-    		if(readyToShoot){
-                playerOne.shoot();
-    		}
-    		else{
-    			reset();
-    		}
-    	}
-    	
-
     	//Check if the input is correct
-    	if(playerString.Pop().Equals(correctInput)){
+    	if(playerString.Dequeue().Equals(correctInput)){
     		if(playerString.Count == 0){ //no more characters
     			readyToShoot = true;
     		}
 
+            Debug.Log(currentLetter);
+
+            Color tmp = objectArray[currentLetter].GetComponent<SpriteRenderer>().color;
+            tmp.a = 0.3f;
+            objectArray[currentLetter].GetComponent<SpriteRenderer>().color = tmp;
+            currentLetter += 1;
     		//update string sprite
     	}
     	else{ //wrong input
+            Debug.Log("Wrong input");
     		reset();
     	}
 
     }
 
+    private void resetAlpha(){
+        for(var i = 0; i < stringLength; i++){
+            Color tmp = objectArray[i].GetComponent<SpriteRenderer>().color;
+            tmp.a = 1f;
+            objectArray[i].GetComponent<SpriteRenderer>().color = tmp;
+        }
+    }
+
 
     private void reset(){
-    	createRandomString();
+        currentLetter = 0;
+    	playerString = createRandomString();
+        displayString(playerString);
+        resetAlpha();
+        
     }
 
 }

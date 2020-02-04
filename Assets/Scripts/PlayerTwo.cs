@@ -8,7 +8,7 @@ public class PlayerTwo: MonoBehaviour
     private int score;
     public Sprite shootingSprite;
     public Sprite standingSprite;
-    public Game gameScript;
+    public GameObject background;
     public float shootingDelay;
 
     // Start is called before the first frame update
@@ -35,13 +35,13 @@ public class PlayerTwo: MonoBehaviour
             {
                 //yield return new WaitForSeconds(shootingDelay);
                 GetComponent<SpriteRenderer>().sprite = standingSprite;
-                gameScript.resetRound();
+                background.GetComponent<Game>().resetRound();
             }
             else
             {
                 Debug.Log("player hit!");
                 score += 1;
-                gameScript.increaseRound();
+                background.GetComponent<Game>().increaseRound();
             }
         }
     }

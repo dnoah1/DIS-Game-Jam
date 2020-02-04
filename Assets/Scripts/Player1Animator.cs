@@ -37,6 +37,7 @@ public class Player1Animator : MonoBehaviour
                 currentFrameIndex++;
                 if (currentFrameIndex >= shootAnimationFrames.Length)
                 {
+                    currentFrameIndex = 0;
                     shootAnimation = false;
                     return;
                 }

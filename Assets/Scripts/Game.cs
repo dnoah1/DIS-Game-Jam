@@ -32,17 +32,20 @@ public class Game : MonoBehaviour
     }
 
     private void resetGame(){
-    	stringControllerOne.initialize(roundNumber*5);
-    	stringControllerTwo.initialize(roundNumber*5);
+        int numberOfLetters = roundNumber*5;
+        if(numberOfLetters > 15){ numberOfLetters = 15; }
+    	stringControllerOne.initialize(numberOfLetters);
+    	stringControllerTwo.initialize(numberOfLetters);
     	//other setup
     }
 
     public void increaseRound(){
     	roundNumber++;
-    	if(roundNumber == 4){
-    		endGame();
-    		return;
-    	}
+
+    	// if(roundNumber == 4){
+    	// 	endGame();
+    	// 	return;
+    	// }
     	resetGame();
     }
 

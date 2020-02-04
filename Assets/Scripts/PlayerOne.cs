@@ -56,8 +56,16 @@ public class PlayerOne : MonoBehaviour
         Debug.Log(GetComponent<Player1Animator>().shootAnimation);
     }   
 
+    public void stand(){
+        GetComponent<Player1Animator>().shootAnimation = false;
+        GetComponent<SpriteRenderer>().sprite = standingSprite;
+    }
+
     public void updateScore(int score)
     {
+        if(score == 3){
+            background.GetComponent<Game>().increaseRound();
+        }
         scoreObject.GetComponent<SpriteRenderer>().sprite = scoreSpriteArray[score];
     }
     

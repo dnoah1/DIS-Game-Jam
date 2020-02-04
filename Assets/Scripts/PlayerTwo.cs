@@ -54,8 +54,16 @@ public class PlayerTwo: MonoBehaviour
         }
     }
 
+    public void stand(){
+        GetComponent<Player2Animator>().shootAnimation = false;
+        GetComponent<SpriteRenderer>().sprite = standingSprite;
+    }
+
     public void updateScore(int score)
     {
+        if(score == 3){
+            background.GetComponent<Game>().increaseRound();
+        }
         scoreObject.GetComponent<SpriteRenderer>().sprite = scoreSpriteArray[score];
     }
 

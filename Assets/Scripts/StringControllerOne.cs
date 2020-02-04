@@ -17,7 +17,7 @@ public class StringControllerOne : MonoBehaviour
 
     private int currentLetter = 0;
 
-    // Start is called before the first frame update
+    // Start is called before the first fr1ame update
     void Start()
     {
     	
@@ -84,7 +84,7 @@ public class StringControllerOne : MonoBehaviour
 
             objectArray[i].GetComponent<SpriteRenderer>().sprite = spriteArray[number];
         }
-        for(var i = stringLength; i < 10; i++){
+        for(var i = stringLength; i < 15; i++){
             objectArray[i].GetComponent<SpriteRenderer>().sprite = null;
         }
     }

@@ -38,6 +38,9 @@ TextureImporter:
   - first:
       213: 1436513720155842651
     second: SeekPng.com_alphabet-png_1504932_11
+  - first:
+      213: -451376099803273067
+    second: SeekPng.com_alphabet-png_1504932_12
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -252,7 +255,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 409
-        y: 174
+        y: 175
         width: 48
         height: 78
       alignment: 0
@@ -361,7 +364,7 @@ TextureImporter:
         width: 48
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -369,6 +372,27 @@ TextureImporter:
       bones: []
       spriteID: 5231b9f0c2f9649a99307354a45efed2
       internalID: 1436513720155842651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeekPng.com_alphabet-png_1504932_12
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 52
+        width: 108
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ab18645478d48daa47d8ac22ba92c5
+      internalID: -451376099803273067
       vertices: []
       indices: 
       edges: []

@@ -84,7 +84,7 @@ public class StringControllerTwo : MonoBehaviour
 
             objectArray[i].GetComponent<SpriteRenderer>().sprite = spriteArray[number];
         }
-        for(var i = stringLength; i < 10; i++){
+        for(var i = stringLength; i < 15; i++){
             objectArray[i].GetComponent<SpriteRenderer>().sprite = null;
         }
     }

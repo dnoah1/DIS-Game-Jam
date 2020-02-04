@@ -37,7 +37,7 @@ public class Game : MonoBehaviour
 
     public void increaseRound(){
     	roundNumber++;
-    	if(roundNumber == 3){
+    	if(roundNumber == 4){
     		endGame();
     		return;
     	}

@@ -50,11 +50,15 @@ public class StringControllerTwo : MonoBehaviour
 
     private void displayString(Stack playerString)
     {
-        string[] letters = (string[])playerString.ToArray();
+
+        Stack tmp = new Stack(playerString);
 
         for (var i = 0; i < stringLength; i++)
         {
-            objectArray[i].GetComponent<SpriteRenderer>().sprite = spriteArray[int.Parse(letters[i])];
+            objectArray[i].GetComponent<SpriteRenderer>().sprite = spriteArray[(int)tmp.Pop()];
+        }
+        for(var i = stringLength; i < 10; i++){
+            objectArray[i].GetComponent<SpriteRenderer>().sprite = null;
         }
     }
 

@@ -458,6 +458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObject1: {fileID: 614924747}
   gameObject2: {fileID: 520147067}
+  music: {fileID: 8300000, guid: d523d39fa008e48f6b113b56ce9ae11a, type: 3}
 --- !u!1 &201684365
 GameObject:
   m_ObjectHideFlags: 0

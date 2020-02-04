@@ -11,12 +11,14 @@ public class Game : MonoBehaviour
 	public GameObject gameObject2;
     private StringControllerOne stringControllerOne;
     private StringControllerTwo stringControllerTwo;
+    public AudioClip music;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        AudioSource.PlayClipAtPoint(music, transform.position);
         stringControllerOne = gameObject1.GetComponent<StringControllerOne>();
         stringControllerTwo = gameObject2.GetComponent<StringControllerTwo>();
         resetGame();
